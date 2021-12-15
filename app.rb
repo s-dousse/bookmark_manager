@@ -10,5 +10,14 @@ class BookmarkManager < Sinatra::Base
     'Hello World'
   end
 
+  get '/bookmarks' do
+  bookmarks = [
+    "www.makersacademy.com",
+    "www.codecademy.com",
+    "wwww.udemy.com"
+  ]
+  bookmarks.join
+  end
+
   run! if app_file == $0
 end
