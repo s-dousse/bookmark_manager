@@ -7,16 +7,12 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/' do
-    'Hello World'
+    'Bookmark Manager'
   end
 
   get '/bookmarks' do
-  bookmarks = [
-    "www.makersacademy.com",
-    "www.codecademy.com",
-    "wwww.udemy.com"
-  ]
-  bookmarks.join
+  @bookmarks = Bookmark.all
+  erb ':bookmarks/index'
   end
 
   run! if app_file == $0
