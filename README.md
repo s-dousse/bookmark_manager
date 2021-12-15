@@ -28,4 +28,4 @@ steps:
 - [x] Write a failing feature test for viewing bookmarks at the `/bookmarks` route.
 - [x] Pass the feature test in the simplest way possible.
 - [x] Refactor the code to use the View and Controller.
-- [ ] Test drive a refactor of the code to use a Model, that returns the list of bookmarks.
+- [x] Test drive a refactor of the code to use a Model, that returns the list of bookmarks.
