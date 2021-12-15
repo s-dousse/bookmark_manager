@@ -29,3 +29,10 @@ steps:
 - [x] Pass the feature test in the simplest way possible.
 - [x] Refactor the code to use the View and Controller.
 - [x] Test drive a refactor of the code to use a Model, that returns the list of bookmarks.
+
+## DB setup
+
+- create 2 db with psql
+    one for development `CREATE DATABASE bookmark_manager;`
+    one for test `CREATE DATABASE bookmark_manager_test;`
+- use query from 01_create_bookmarks_table.sql to create the table for both db

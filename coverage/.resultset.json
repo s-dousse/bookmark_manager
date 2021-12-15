@@ -28,13 +28,29 @@
       "/Users/Swa/Desktop/Projects/solo-challenges/bookmark_manager/lib/bookmark.rb": {
         "lines": [
           1,
-          1,
           null,
+          1,
+          1,
+          2,
           2,
           null,
+          0,
           null,
           null,
+          2,
+          5,
           null,
+          null
+        ]
+      },
+      "/Users/Swa/Desktop/Projects/solo-challenges/bookmark_manager/spec/setup_test_database.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
           null
         ]
       },
@@ -45,8 +61,8 @@
           1,
           null,
           1,
-          1,
-          1,
+          0,
+          0,
           null,
           null
         ]
@@ -58,6 +74,14 @@
           1,
           1,
           1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           1,
           null,
           1,
@@ -70,6 +94,6 @@
         ]
       }
     },
-    "timestamp": 1639607434
+    "timestamp": 1639609921
   }
 }

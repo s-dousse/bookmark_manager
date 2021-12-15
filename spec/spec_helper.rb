@@ -1,3 +1,5 @@
+ENV['ENVIRONMENT'] = 'test'
+
 require 'simplecov'
 require 'simplecov-console'
 
@@ -29,6 +31,14 @@ require 'rspec'
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = BookmarkManager
+
+require_relative './setup_test_database'
+
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
 
 ### the rest of the file ###
 
