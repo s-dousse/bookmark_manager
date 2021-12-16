@@ -35,4 +35,4 @@ steps:
 - create 2 db with psql
     one for development `CREATE DATABASE bookmark_manager;`
     one for test `CREATE DATABASE bookmark_manager_test;`
-- use query from 01_create_bookmarks_table.sql to create the table for both db
+- use queries from db/migrations
