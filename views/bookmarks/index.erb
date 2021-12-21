@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="">
   </head>
   <body>
-    <ul>
-      <% @bookmarks.each do |bookmark| %>
-        <li>
-         <%= bookmark%>
-        </li>
-      <% end %>
-      <form action="/bookmarks" method="post">
-    </ul>
+  <ul>
+  <% @bookmarks.each do |bookmark| %>
+    <li>
+      <a href="<%= bookmark.url %>">
+        <%= bookmark.title %>
+      </a>
+    </li>
+    <% end %>
+  </ul>
+    <form action="/bookmarks/new" method="get">
   <input type="submit" value="Add bookmark" />
   </form>
   </body>

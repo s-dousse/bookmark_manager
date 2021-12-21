@@ -4,7 +4,7 @@ feature 'Adding a new bookmark' do
     visit('/bookmarks')
     click_button('Add bookmark')
 
-    # fill_in('url', with: 'http://www.example.org')
+    fill_in('url', with: 'http://www.example.org')
     fill_in('title', with: 'Test Bookmark')
     click_button('Submit')
 
