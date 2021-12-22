@@ -48,6 +48,20 @@ steps:
 ## Securing our App
 OWASP Top Ten: https://owasp.org/www-project-top-ten/
 - finding the vunerability: in our model the user'input is collected via the  new bookmark form and inserted into an SQL query string template
-- if the right snippet of SQL is inserted into one of those two form fields, that SQL would be executed (DROP TABLE etc)
+- if the right snippet of SQL is inserted into one of the two form fields, that SQL string would be executed (DROP TABLE etc)
 - make changes to defend against SQL injection
 'https://www.rubydoc.info/gems/pg/PG%2FConnection:exec_params'
+
+## feature 2 : Deleting bookmarks
+user story 2
+```
+As a user
+So I can remove my bookmark from Bookmark Manager
+I want to delete a bookmark.
+```
+
+- write Capybara test based on user's flow:
+    a) Visit the bookmarks page
+    b) Click a 'delete' button next to a bookmark
+    c) See the bookmarks page, without that bookmark
+

@@ -35,13 +35,7 @@ class Bookmark
       con = PG.connect(dbname: 'bookmark_manager')
     end
 
-    rs = con.exec_params(
-      # The first argument is our SQL query template
-      # The second argument is the 'params' referred to in exec_params
-      # $1 refers to the first item in the params array
-      # $2 refers to the second item in the params array
-      "INSERT INTO bookmarks (url, title) VALUES($1, $2) RETURNING id, title, url;", [url, title]
-    )
+    rs = con.exec_params("INSERT INTO bookmarks (url, title) VALUES($1, $2) RETURNING id, title, url;", [url, title])
 
     Bookmark.new(
       id: rs[0]['id'],
