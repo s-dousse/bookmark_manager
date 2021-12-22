@@ -46,3 +46,8 @@ steps:
 - update all the unit tests
 
 ## Securing our App
+OWASP Top Ten: https://owasp.org/www-project-top-ten/
+- finding the vunerability: in our model the user'input is collected via the  new bookmark form and inserted into an SQL query string template
+- if the right snippet of SQL is inserted into one of those two form fields, that SQL would be executed (DROP TABLE etc)
+- make changes to defend against SQL injection
+'https://www.rubydoc.info/gems/pg/PG%2FConnection:exec_params'
