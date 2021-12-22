@@ -64,4 +64,5 @@ I want to delete a bookmark.
     a) Visit the bookmarks page
     b) Click a 'delete' button next to a bookmark
     c) See the bookmarks page, without that bookmark
+- We need to build a route for our Delete button to submit to, in app.rb, and enable :method_override => use DELETE method
 
