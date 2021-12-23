@@ -38,5 +38,17 @@ describe 'Bookmark' do
       expect(Bookmark.all.length).to eq 0
     end
   end
+
+  describe '.update' do
+    it 'updates the data of an existing bookmark' do
+      bookmark = Bookmark.create(url: 'wwww.justanothertest.com', title: 'Another test')
+      updated_bookmark = Bookmark.update(id: bookmark.id, url: 'www.randomurl.com', title: 'Random Url')
+
+      expect(updated_bookmark).to be_a Bookmark
+      expect(updated_bookmark.id).to eq bookmark.id
+      expect(updated_bookmark.title).to eq 'Random Url'
+      expect(updated_bookmark.url).to eq 'www.randomurl.com'
+    end
+  end
 end
 
