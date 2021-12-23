@@ -1,6 +1,11 @@
 # bookmark_manager
 
-solo quest to review key concepts of DB and ORM
+solo quest to review key concepts such as:
+
+- Agile and TDD
+- Engineering and 'Dev Recipes'
+- Databases
+- Tooling
 
 specifications :
 
@@ -13,7 +18,7 @@ specifications :
 - Filter bookmarks by tag
 - Users are restricted to manage only their own bookmarks
 
-## feature 1 : Viewing bookmarks
+## feature 1 : Adding & Viewing bookmarks
 
 user story 1
 
@@ -46,14 +51,18 @@ steps:
 - update all the unit tests
 
 ## Securing our App
+
 OWASP Top Ten: https://owasp.org/www-project-top-ten/
-- finding the vunerability: in our model the user'input is collected via the  new bookmark form and inserted into an SQL query string template
+
+- finding the vunerability: in our model the user'input is collected via the new bookmark form and inserted into an SQL query string template
 - if the right snippet of SQL is inserted into one of the two form fields, that SQL string would be executed (DROP TABLE etc)
 - make changes to defend against SQL injection
-'https://www.rubydoc.info/gems/pg/PG%2FConnection:exec_params'
+  'https://www.rubydoc.info/gems/pg/PG%2FConnection:exec_params'
 
 ## feature 2 : Deleting bookmarks
+
 user story 2
+
 ```
 As a user
 So I can remove my bookmark from Bookmark Manager
@@ -61,8 +70,22 @@ I want to delete a bookmark.
 ```
 
 - write Capybara test based on user's flow:
-    a) Visit the bookmarks page
-    b) Click a 'delete' button next to a bookmark
-    c) See the bookmarks page, without that bookmark
+  1. Visit the bookmarks page
+  2. Click a 'delete' button next to a bookmark
+  3. See the bookmarks page, without that bookmark
 - We need to build a route for our Delete button to submit to, in app.rb, and enable :method_override => use DELETE method
 
+## feature 3 : Update bookmarks
+
+user story 3
+
+```
+As a user
+So I can change a bookmark in Bookmark Manager
+I want to update a bookmark
+```
+
+- [x] : write feature test
+- [ ] : update view and controller
+- [ ] : TDD for model
+- [ ] : update view and controller
