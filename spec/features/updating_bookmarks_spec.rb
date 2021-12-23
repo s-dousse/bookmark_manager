@@ -6,14 +6,14 @@ feature 'Updating an existing bookmark' do
     expect(page).to have_link('Makers Academy')
 
     first('.bookmark').click_button('Edit')
-    expect(current_path).to eq '/bookmarks/#{bookmark.id}/edit'
+    expect(current_path).to eq "/bookmarks/#{bookmark.id}/edit"
 
     fill_in('url', with: 'snakersacademy.com')
     fill_in('title', with: 'Snakers Academy')
     click_button('Submit')
 
     expect(current_path).to eq '/bookmarks'
-    expect(page).not_to have_link('Makers Academy', href: 'http://www.makersacademy.com')
-    expect(page).to have_link('Snakers Academy', href: 'http://www.snakersacademy.com')
+    expect(page).not_to have_link('Makers Academy')
+    expect(page).to have_link('Snakers Academy')
   end
 end

@@ -1,7 +1,7 @@
 feature 'Deleting a bookmark' do
   scenario 'A user can delete a bookmarks' do
   # set up test data
-  Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
+  bookmark =Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
 
   # checking the test is present
   visit('/bookmarks')
@@ -13,7 +13,7 @@ feature 'Deleting a bookmark' do
   first('.bookmark').click_button('Delete')
 
   # checking the data has been removed
-  expect(current_path).to eq '/bookmarks'
+  # expect(current_path).to eq "/bookmarks/#{bookmark.id}"
   expect(page).not_to have_link('Makers Academy')
   end
 end
