@@ -86,6 +86,9 @@ I want to update a bookmark
 ```
 
 - [x] : write feature test
-- [ ] : update view and controller
-- [ ] : TDD for model
-- [ ] : update view and controller
+- [x] : update view and controller
+- [x] : TDD for model
+- [x] : update controller
+
+add a feature to see just one bookmark before updating it
+

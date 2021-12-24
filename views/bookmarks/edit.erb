@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="">
   </head>
   <body>
-    <form action="/bookmarks/<%= @bookmark_id %>" method="post">
+    <form action="/bookmarks/<%= @bookmark.id %>" method="post">
       <input type="hidden" name="_method" value="PATCH">
       <div id='fields' >
 		    <label for='url'>URL:
-			   <input type='text' name='url' placeholder='https://makers.tech/' />
+			   <input type='text' name='url' value='<%= @bookmark.url %>' />
 		    </label>
 	    </div>
       <div id='fields' >
 		    <label for='title'>Title:
-			   <input type='text' name='title' placeholder='Makers Academy' />
+			   <input type='text' name='title' value='<%= @bookmark.title %>' />
 	    </div>
       <input type="submit" name="Submit" />
     </form>

@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="">
   </head>
   <body>
+    <form action="/bookmarks/new" method="get">
+        <input type="submit" value="Add bookmark" />
+    </form>
   <ul>
     <% @bookmarks.each do |bookmark| %>
     <li class="bookmark" id="bookmark-<%= bookmark.id %>">
@@ -21,9 +24,6 @@
         <input type="submit" value="Edit"/>
       <form>
       <% end %>
-    </ul>
-      <form action="/bookmarks/new" method="get">
-        <input type="submit" value="Add bookmark" />
-      </form>   
+    </ul>   
   </body>
 </html>

@@ -33,7 +33,8 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/bookmarks/:id/edit' do
-    @bookmark_id = params[:id]
+    # @bookmark_id = params[:id]
+    @bookmark = Bookmark.find(id: params[:id]) # to see the current data in the edit form
     erb :'bookmarks/edit'
   end
 
