@@ -14,4 +14,14 @@ describe DatabaseConnection do
       expect(DatabaseConnection.connection).to eq con
     end
   end
+
+  describe '.query' do
+    it 'executes a query via PG' do
+      connection = DatabaseConnection.setup('bookmark_manager_test')
+
+      expect(connection).to receive(:exec_params).with("SELECT * FROM bookmarks;", [])
+
+      DatabaseConnection.query("SELECT * FROM bookmarks;")
+    end
+  end
 end
