@@ -301,8 +301,40 @@
           1,
           null
         ]
+      },
+      "/Users/Swa/Desktop/Projects/solo-challenges/bookmark_manager/spec/unit/database_connection_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Swa/Desktop/Projects/solo-challenges/bookmark_manager/lib/database_connection.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1640306131
+    "timestamp": 1640518304
   }
 }

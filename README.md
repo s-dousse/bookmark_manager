@@ -90,5 +90,11 @@ I want to update a bookmark
 - [x] : TDD for model
 - [x] : update controller
 
-add a feature to see just one bookmark before updating it
+add a feature to see just one bookmark before updating it: #find (use the bookmark's id)
+
+## extracting a Database setup object
+
+- Separate application behaviour from database behaviour
+- Wrap an adaptor object
+
 
