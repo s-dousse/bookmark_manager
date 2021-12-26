@@ -10,6 +10,7 @@ group :development do
   gem 'sinatra-contrib'
   gem 'pg'
   gem 'rack'
+  gem 'sinatra-flash'
 end
 
 group :test do

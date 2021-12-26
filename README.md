@@ -97,4 +97,11 @@ add a feature to see just one bookmark before updating it: #find (use the bookma
 - Separate application behaviour from database behaviour
 - Wrap an adaptor object
 
+## validating bookmarks
 
+Validate user input in the model layer
+https://github.com/SFEley/sinatra-flash
+
+- Adding a feature test for an invalid URL
+- Adding Sinatra-Flash to show a message, passing this test
+- Refactoring the validation logic into the Bookmark model

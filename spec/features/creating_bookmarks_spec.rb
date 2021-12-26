@@ -10,4 +10,13 @@ feature 'Adding a new bookmark' do
 
     expect(page).to have_link('Test Bookmark', href: 'http://www.example.org')
   end
+
+  scenario 'A user adds an invalid url' do
+    visit('/bookmarks/new')
+    fill_in('url', with: 'not a real bookmark')
+    fill_in('title', with: 'invalid url')
+
+    expect(page).to_not have_content('invalid url')
+    expect(page).to have_content("You must submit a valid URL.")
+  end
 end
