@@ -15,6 +15,7 @@ feature 'Adding a new bookmark' do
     visit('/bookmarks/new')
     fill_in('url', with: 'not a real bookmark')
     fill_in('title', with: 'invalid url')
+    click_button('Submit')
 
     expect(page).to_not have_content('invalid url')
     expect(page).to have_content("You must submit a valid URL.")

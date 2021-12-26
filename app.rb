@@ -3,12 +3,13 @@ require 'sinatra/reloader'
 require './lib/bookmark'
 require './database_connection_setup'
 require 'sinatra/flash'
+require 'uri'
 
 class BookmarkManager < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
-  
+
   enable :method_override
   enable :sessions
   register Sinatra::Flash
@@ -27,11 +28,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/bookmarks' do
-    if params['url'] =~ /\A#{URI::regexp(['http', 'https'])}\z/
-      Bookmark.create(url: params[:url], title: params[:title])
-    else
-      flash[:notice] = "You must submit a valid URL."
-    end
+    flash[:notice] = "You must submit a valid URL." unless Bookmark.create(url: params['url'], title: params['title'])
     redirect '/bookmarks'
   end
 

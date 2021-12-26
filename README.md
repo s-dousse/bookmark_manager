@@ -97,7 +97,15 @@ add a feature to see just one bookmark before updating it: #find (use the bookma
 - Separate application behaviour from database behaviour
 - Wrap an adaptor object
 
-## validating bookmarks
+## feature 4: validating bookmarks
+
+user story 4
+
+```
+As a user
+So that the bookmarks I save are useful
+I want to only save a valid URL
+```
 
 Validate user input in the model layer
 https://github.com/SFEley/sinatra-flash

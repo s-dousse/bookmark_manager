@@ -1,4 +1,5 @@
 require 'pg'
+require 'uri'
 
 class Bookmark
 
@@ -24,6 +25,8 @@ class Bookmark
 
 
   def self.create(url:, title:)
+    # only create a Bookmark if url is valid
+    return false unless is_url?(url)
     rs = DatabaseConnection.query(
       "INSERT INTO bookmarks (url, title) VALUES($1, $2)
       RETURNING id, title, url;",
@@ -61,5 +64,11 @@ end
       title: rs[0]['title'],
       url: rs[0]['url']
     )
+  end
+
+  private
+  
+  def self.is_url?(url)
+    url =~ /\A#{URI::regexp(['http', 'https'])}\z/
   end
 end
