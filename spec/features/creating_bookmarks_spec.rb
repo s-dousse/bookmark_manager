@@ -1,5 +1,5 @@
 feature 'Adding a new bookmark' do
-  scenario 'A user can add a bookmark' do
+  scenario 'A user adds a valid bookmark' do
 
     visit('/bookmarks')
     click_button('Add bookmark')

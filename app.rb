@@ -6,9 +6,9 @@ require 'sinatra/flash'
 require 'uri'
 
 class BookmarkManager < Sinatra::Base
-  configure :development do
-    register Sinatra::Reloader
-  end
+  # configure :development do
+  #   register Sinatra::Reloader
+  # end
 
   enable :method_override
   enable :sessions
