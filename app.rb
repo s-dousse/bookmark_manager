@@ -4,6 +4,7 @@ require './lib/bookmark'
 require './database_connection_setup'
 require 'sinatra/flash'
 require 'uri'
+require './lib/comment'
 
 class BookmarkManager < Sinatra::Base
   # configure :development do
@@ -49,7 +50,8 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/bookmarks/:id/comments/new' do
-    @bookmark_id = params[:id]
+    # @bookmark_id = params[:id]
+    @bookmark = Bookmark.find(id: params[:id]) # to see the current data in the edit form
     erb :'comments/new'
   end
 

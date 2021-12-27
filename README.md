@@ -146,4 +146,15 @@ Viewing comments:
 
 We need the Bookmark instance to respond to the comments method, and return an array of comments.
 
+- create a unit test for a #comments method
+- update model (Bookmark class): direct connection to the db to retrieve comments data entries
+- update controller: post route 'bookmarks/:id/comments'
+
 We create a Comment class that handles the creation of comments.
+
+- create unit test for a .create method
+- update model (Comment class)
+- update model (Bookmark class) with Comment.create instead of connection to db (+ spec)
+- create unit test for a .where method
+- update model (Comment class)
+- update view bookmarks/index.erb : iterate over the array given by bookmark.comments and display the comment as text

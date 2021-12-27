@@ -18,4 +18,18 @@ class Comment
       bookmark_id: rs[0]['bookmark_id']
     )
   end
+
+  def self.where(bookmark_id:)
+    rs = DatabaseConnection.query(
+      "SELECT * FROM comments WHERE bookmark_id = $1;",
+      [bookmark_id]
+    )
+    rs.map do |comment|
+      Comment.new(
+        id: comment['id'],
+        text: comment['text'],
+        bookmark_id: comment['bookmark_id']
+      )
+    end
+  end
 end

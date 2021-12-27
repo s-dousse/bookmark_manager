@@ -70,17 +70,13 @@ describe 'Bookmark' do
   end
 
   describe '.comments' do
+    let(:comment_class) { double(:comment_class) }
     it 'return a list of comments' do
       bookmark = Bookmark.create(url: 'http://www.anothertest.com', title: 'Another test')
 
-      DatabaseConnection.query(
-        "INSERT INTO comments (id, text, bookmark_id) VALUES(1, 'Test Comment', $1);",
-        [bookmark.id]
-      )
+      expect(comment_class).to receive(:where).with(bookmark_id: bookmark.id)
 
-      comment = bookmark.comments.first
-
-      expect(comment['text']).to eq 'Test Comment'
+      bookmark.comments(comment_class)
     end
   end
 end
