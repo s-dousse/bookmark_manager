@@ -1,7 +1,7 @@
 feature 'Deleting a bookmark' do
   scenario 'A user can delete a bookmarks' do
   # set up test data
-  bookmark =Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
+  bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
 
   # checking the test is present
   visit('/bookmarks')

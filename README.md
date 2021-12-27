@@ -107,7 +107,7 @@ So that the bookmarks I save are useful
 I want to only save a valid URL
 ```
 
-Validate user input in the model layer: 
+Validate user input in the model layer:
 https://github.com/SFEley/sinatra-flash
 
 - Adding a feature test for an invalid URL
@@ -124,4 +124,22 @@ So that I can make interesting notes
 I want to add a Comment to a Bookmark
 ```
 
+One bookmark can have many comments
 One-to-many Relations: https://www.databaseprimer.com/pages/relationship_1tox/
+
+We will have a column with the bookmark_id (id from bookmarks table) in our comments table.
+
+### new table to store comments data
+
+1. create new table: comments
+2. add to db/migration
+3. update setup_test_database and database_helpers
+
+Viewing comments:
+
+- add feature test
+- update view index.erb => form 'Add comment'
+- update controller => get route to display the form using the bookmark's id
+- create a view to display the comment form (comments/new)
+- update the controller => post route to store the data and turn it into a comment
+- update view index.erb => display comment for each bookmark (bookmark.comments return an array of comments)
