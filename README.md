@@ -139,7 +139,9 @@ Viewing comments:
 
 - add feature test
 - update view index.erb => form 'Add comment'
-- update controller => get route to display the form using the bookmark's id
-- create a view to display the comment form (comments/new)
+- update controller => get route to display the form using the bookmark's id (comment/new.erb)
+- create a view to display the comment form (comments/new.erb)
 - update the controller => post route to store the data and turn it into a comment
-- update view index.erb => display comment for each bookmark (bookmark.comments return an array of comments)
+- update view index.erb => display comment for each bookmark (bookmark.comments)
+
+We need the Bookmark instance to respond to the comments method, and return an array of comments

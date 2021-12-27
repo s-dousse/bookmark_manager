@@ -66,6 +66,13 @@ end
     )
   end
 
+  def comments
+    DatabaseConnection.query(
+      "SELECT * FROM comments WHERE bookmark_id = $1;",
+      [id]
+    )
+  end
+
   private
   
   def self.is_url?(url)
