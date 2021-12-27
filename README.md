@@ -107,9 +107,21 @@ So that the bookmarks I save are useful
 I want to only save a valid URL
 ```
 
-Validate user input in the model layer
+Validate user input in the model layer: 
 https://github.com/SFEley/sinatra-flash
 
 - Adding a feature test for an invalid URL
 - Adding Sinatra-Flash to show a message, passing this test
 - Refactoring the validation logic into the Bookmark model
+
+## feature 5 : comment on bookmarks
+
+user story 5
+
+```
+As a user
+So that I can make interesting notes
+I want to add a Comment to a Bookmark
+```
+
+One-to-many Relations: https://www.databaseprimer.com/pages/relationship_1tox/
