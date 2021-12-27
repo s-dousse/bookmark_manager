@@ -144,4 +144,6 @@ Viewing comments:
 - update the controller => post route to store the data and turn it into a comment
 - update view index.erb => display comment for each bookmark (bookmark.comments)
 
-We need the Bookmark instance to respond to the comments method, and return an array of comments
+We need the Bookmark instance to respond to the comments method, and return an array of comments.
+
+We create a Comment class that handles the creation of comments.
