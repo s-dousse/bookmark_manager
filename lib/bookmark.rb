@@ -70,6 +70,13 @@ end
     comment_class.where(bookmark_id: id)
   end
 
+  def tags
+    DatabaseConnection.query(
+      "SELECT * FROM tags;",
+      []
+    )
+  end
+
   private
   
   def self.is_url?(url)

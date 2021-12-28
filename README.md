@@ -158,3 +158,30 @@ We create a Comment class that handles the creation of comments.
 - create unit test for a .where method
 - update model (Comment class)
 - update view bookmarks/index.erb : iterate over the array given by bookmark.comments and display the comment as text
+
+## feature 6: Tag bookmarks into categories
+
+join table for Tags and Bookmarks (many to many relationship)
+
+- one 'sibling' model, Bookmark, belongs to and has many Tags
+- the other 'sibling' model, Tag, belongs to and has many Bookmarks
+- the join table belongs to Bookmark and belongs to Tag
+
+https://stackoverflow.com/questions/7296846/how-to-implement-one-to-one-one-to-many-and-many-to-many-relationships-while-de
+
+https://dzone.com/articles/how-to-handle-a-many-to-many-relationship-in-datab
+
+### new table to store tags data
+
+1. create new table: tags and bookmarks_tag (join table)
+2. add to db/migration
+3. update setup_test_database
+
+Adding and Viewing Tags:
+- feature test
+- add routes to create tags
+- add form to view
+- TDD Tags and BookmarksTags models
+- add a #tag method to the Bookmark instances
+
+## feature 7: Filter bookmarks by tag

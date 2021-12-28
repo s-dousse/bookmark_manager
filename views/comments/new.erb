@@ -10,15 +10,12 @@
     <h2>Add a Comment </h2>
     <h3>to your <em><%= @bookmark.title %></em> bookmark</h3>
     <form action='/bookmarks/<%= @bookmark.id %>/comments' method='post'>
-
       <div id='fields' >
 		    <label for='comment'>COMMENT:
 			   <input type='text' name='comment' />
+         <input type='submit' value='Submit' />
 		    </label>
 	    </div>
-
-			  <input type='submit' value='Submit' />
-      
     </form>
   </body>
 </html>

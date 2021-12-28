@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bookmark Manager</title>
+    <meta name="bookmark manager , building a simple webapp" content="">
+    <link rel="stylesheet" href="">
+  <head>
+  <body>
+    <h2>Add a Tag</h2>
+    <h3>to your <em><%= @bookmark.title%></em> bookmark</h3>
+    <form action='/bookmarks/<%= @bookmark.id %>/tags' method='post'>
+      <div id='fields' >
+        <label for='tag'>TAG:
+          <input type='text' name='tag'/>
+          <input type='submit' value='Submit'>
+        </label>
+      </div>
+    </form>
+  </body>
+</html>

@@ -60,5 +60,19 @@ class BookmarkManager < Sinatra::Base
     redirect '/bookmarks'
   end
 
+  get '/bookmarks/:id/tags/new' do
+    @bookmark = Bookmark.find(id: params[:id])
+    erb :'tags/new'
+  end
+
+  post '/bookmarks/:id/tags' do
+    con = PG.connect(dbname: 'bookmark_manager_test')
+    con.exec_params(
+      "INSERT INTO tags(content) VALUES($1);",
+      [params[:tag]]
+    )
+    redirect '/bookmarks'
+  end
+
   run! if app_file == $0
 end
